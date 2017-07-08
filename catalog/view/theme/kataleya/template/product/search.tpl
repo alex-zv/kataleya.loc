@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-<div class="page-wrap">
+<div class="page-wrap search">
     <div id="content">
       <ul class="breadcrumb cube">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -66,16 +66,16 @@
                 <input type="checkbox" name="description" value="1" id="description" />
                 <?php } ?>
                 <?php echo $entry_description; ?></label>
-                <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary" />
+                <p><input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn-2" /></p>
                 <h2><?php echo $text_search; ?></h2>
             </p>
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
+            <div class="row item-wrap">
+              <div class="item">
                 <div class="form-group">
-                  <a href="<?php echo $compare; ?>" id="compare-total" class="btn btn-link"><?php echo $text_compare; ?></a>
+                  <a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a>
                 </div>
               </div>
-              <div class="col-md-4 col-xs-6">
+              <div class="item">
                 <div class="form-group input-group input-group-sm">
                   <label class="input-group-addon" for="input-sort"><?php echo $text_sort; ?></label>
                   <select id="input-sort" class="form-control" onchange="location = this.value;">
@@ -89,7 +89,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-3 col-xs-6">
+              <div class="item">
                 <div class="form-group input-group input-group-sm">
                   <label class="input-group-addon" for="input-limit"><?php echo $text_limit; ?></label>
                   <select id="input-limit" class="form-control" onchange="location = this.value;">
