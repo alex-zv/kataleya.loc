@@ -1,6 +1,5 @@
 <?php echo $header; ?>
 <div class="page-wrap product-page">
-    <?php echo $column_left; ?>
 
     <?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
