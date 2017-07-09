@@ -117,27 +117,25 @@
 
        <div class="header-bottom clearfix">
            <nav>
-               <ul>
+               <ul id="main-menu">
                    <li class="cube">
-                       <a href="#">Главная</a>
+                       <a href="/">Главная</a>
                    </li>
-                   <li class="cube" id="catalog-item">
+                   <li class="cube" id="catalog">
                        <a href="#">Каталог</a>
-                       <ul style="display: none;">
+                       <ul>
                          <?php foreach ($categories as $category) { ?>
                          <?php if ($category['children']) { ?>
-                         <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
-                           <div class="dropdown-menu">
-                             <div class="dropdown-inner">
+                         <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+                           
                                <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-                               <ul class="list-unstyled">
+                               <ul>
                                  <?php foreach ($children as $child) { ?>
                                  <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
                                  <?php } ?>
                                </ul>
                                <?php } ?>
-                             </div>
-                             <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
+                             
                          </li>
                          <?php } else { ?>
                          <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
@@ -146,16 +144,13 @@
                        </ul>
                    </li>
                    <li class="cube">
-                       <a href="#">Галерея</a>
+                       <a href="http://kataleya.loc/delivery">Доставка и оплата</a>
                    </li>
                    <li class="cube">
-                       <a href="http://kataleya.loc/index.php?route=information/information&information_id=6">Доставка и оплата</a>
+                       <a href="http://kataleya.loc/about_us">О нас</a>
                    </li>
                    <li class="cube">
-                       <a href="http://kataleya.loc/index.php?route=information/information&information_id=4">О нас</a>
-                   </li>
-                   <li class="cube">
-                       <a href="http://kataleya.loc/index.php?route=information/information&information_id=8">Контакты</a>
+                       <a href="http://kataleya.loc/contacts">Контакты</a>
                    </li>
                </ul>
             </nav>

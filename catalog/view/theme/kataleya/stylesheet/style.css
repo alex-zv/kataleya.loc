@@ -70,6 +70,8 @@ a:hover {
 
 header {
 	margin-top: 48px;
+	position: relative;
+	z-index: 5;
 }
 
 
@@ -330,16 +332,16 @@ button:focus {
 }
 
 #content.col-r {
-	margin-right: 338px;
+	margin-right: 325px;
 }
 
 #content.col-l {
-	margin-left: 338px;
+	margin-left: 325px;
 }
 
 #content.col-2 {
-	margin-left: 338px;
-	margin-right: 338px;
+	margin-left: 325px;
+	margin-right: 325px;
 }
 
 .sidebar {
@@ -510,30 +512,61 @@ button:focus {
 }
 
 /*custom*/
-#catalog-item {
+#catalog {
 	position: relative;
 }
-#catalog-item > ul {
-	display: block;
+#catalog > ul {
+	display: none;
 	position: absolute;
 	z-index: 99999;
-	
 	width: 250px;
+	top: 103%;
+	left: -2px;
+	border-right: 1px solid #b0bfbd;
+	border-left: 1px solid #b0bfbd;
+
 }
 
-#catalog-item > ul li {
+#catalog ul {
+	background: #5d7671;
+}
+
+#catalog ul li {
+	border-bottom: 1px solid #b0bfbd;
+}
+
+#main-menu li:first-child ul {
 	display: block;
-	background-color: #000;
+} 
+
+#catalog ul ul {
+	display: none;
+	position: absolute;
+	left: 248px;
+    top: -1px;
+    width: 150px;
+    border-right: 1px solid #b0bfbd;
+    border-top: 1px solid #b0bfbd;
+    border-left: 1px solid #b0bfbd;
+
+
+}
+
+#catalog ul li {
+	display: block;
+	background-color: ;
 	line-height: 33px;
+	position: relative;
 }
 
-#catalog-item > ul li:nth-child(n+2) {
-	margin-top: 10px;
+#catalog > ul li:nth-child(n+2) {
+	
 }
 
-#catalog-item > ul li a {
+#catalog ul li a {
 	font-size: 13px;
 	text-align: left;
+	line-height: 40px;
 }
 
 /*custom*/
@@ -877,13 +910,13 @@ button:focus {
 .search .top-block .form-group a {
 	font-size: 14px;
 }
-.category-page .pagination-wrap {
+.pagination-wrap {
 	text-align: center;
 	padding: 10px;
 	margin-top: 20px;
 }
 
-.category-page .pagination-wrap .result {
+.pagination-wrap .result {
 	color: #fff;
 	margin-top: 8px;
 }
@@ -1009,7 +1042,7 @@ button:focus {
 }
 
 .product-page .row .right-side .form-group #button-cart:hover {
-	top: 1px;
+	top: -1px;
 }
 
 /* product - page END */
@@ -1136,5 +1169,9 @@ footer .footer-left p {
 @media screen and (max-width: 1300px) {
 	.page-wrap, .wrapper {
 		padding: 0 20px;
+	}
+
+	#column-right {
+		right: 20px;
 	}
 }

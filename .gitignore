@@ -6,6 +6,8 @@ ehthumbs.db
 Desktop.ini
 .gitignore
 /system/storage/cache/
+/image/cache/*
+
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 

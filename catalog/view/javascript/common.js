@@ -133,6 +133,15 @@ $(document).ready(function() {
 	$(document).ajaxStop(function() {
 		$('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
 	});
+
+	// menu
+	var $catalog = $('#main-menu li');
+
+	$catalog.hover(function () {
+        $('ul:first', this).stop().show();},function () {
+        $('ul:first', this).stop().hide();      
+    });
+	// menu end
 });
 
 // Cart add remove functions
