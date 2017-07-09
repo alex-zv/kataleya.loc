@@ -135,9 +135,11 @@ $(document).ready(function() {
 	});
 
 	// menu
-	var $catalog = $('#main-menu li');
-
-	$catalog.hover(function () {
+	var $menu = $('#main-menu li');
+	$('#catgalog > a').on('click', function (e) {
+		e.preventDefault();
+	})
+	$menu.hover(function () {
         $('ul:first', this).stop().show();},function () {
         $('ul:first', this).stop().hide();      
     });

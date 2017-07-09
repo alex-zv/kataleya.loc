@@ -11,10 +11,27 @@ body {
 	background-attachment: fixed;
 	color: #000;
 }
-
+h1 {
+	font-size: 33px;
+}
+h2 {
+	font-size: 27px;
+}
+h3 {
+	font-size: 21px;
+}
+h4 {
+	font-size: 15px;
+}
+h5 {
+	font-size: 12px;
+}
+h6 {
+	font-size: 10.2px;
+}
 a {
     color: #f1bf90;
-    text-decoration: none
+    text-decoration: none;
 }
 
 a:hover {
@@ -233,10 +250,6 @@ header nav ul li.cube::after {
 	width: 19px;
 	height: 60%;
 	right: -21px;
-}
-
-header nav ul li a:hover {
-	text-shadow: 2px 0px 30px #000;
 }
 
 #cart {
@@ -567,6 +580,14 @@ button:focus {
 	font-size: 13px;
 	text-align: left;
 	line-height: 40px;
+}
+
+#catalog ul li a i.fa {
+	font-size: 12px;
+	position: absolute;
+	right: 6px;
+	top: 50%;
+	margin-top: -6px;
 }
 
 /*custom*/
@@ -1097,6 +1118,54 @@ button:focus {
 }
 
 /* SEARCH END*/
+
+/*arcticle page*/
+.article {
+	padding: 15px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.article h1 {
+	font-size: 33px;
+	margin-bottom: 20px;
+	font-weight: 500;
+	color: #fff;
+	text-align: center;
+}
+
+.article .content > p {
+	margin-bottom: 10px;
+}
+
+.article .content ol {
+	list-style-type: decimal;
+	padding-left: 40px;
+	margin-bottom: 10px;
+}
+
+.article .content ul {
+	list-style-type: disc;
+	padding-left: 40px;
+	margin-bottom: 10px;
+}
+
+.article .content ul li, .article .content ol li {
+	margin-bottom: 5px;
+}
+
+.article .content ul li:last-child, .article .content ol li:last-child {
+	margin-bottom: 0;
+}
+.article .content b {
+	font-weight: 700;
+}
+
+.article .content img {
+	max-width: 100%;
+}
+/*arcticle page END*/
+
 
 /* alert */
 .alert {

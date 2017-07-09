@@ -18,9 +18,9 @@
     </ul>
 
     <?php echo $content_top; ?>
-    <div class="content">
+    <div class="article cube">
       <h1><?php echo $heading_title; ?></h1>
-      <div class="text">
+      <div class="content clearfix">
         <?php echo $description; ?>
       </div>
     </div>

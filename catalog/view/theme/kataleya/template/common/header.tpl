@@ -126,7 +126,7 @@
                        <ul>
                          <?php foreach ($categories as $category) { ?>
                          <?php if ($category['children']) { ?>
-                         <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+                         <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?> <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
                            
                                <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                                <ul>
