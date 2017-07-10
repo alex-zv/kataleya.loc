@@ -535,13 +535,16 @@ button:focus {
 	width: 250px;
 	top: 103%;
 	left: -2px;
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
 	border-right: 1px solid #b0bfbd;
+	border-top: 1px solid #b0bfbd;
 	border-left: 1px solid #b0bfbd;
 
 }
 
 #catalog ul {
 	background: #5d7671;
+	
 }
 
 #catalog ul li {
@@ -744,8 +747,14 @@ button:focus {
 .prod-thumb .image {
 	text-align: center;
 	margin-bottom: 13px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
+.prod-thumb .image:hover {
+	filter: grayscale(1);
+}
 .prod-thumb .image img {
 	max-width: 100%;
 	display: inline-block;
@@ -753,7 +762,7 @@ button:focus {
 }
 
 .prod-thumb .image img:hover {
-	opacity: 0.9;
+	/*opacity: 1;*/
 }
 
 

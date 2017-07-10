@@ -1,6 +1,9 @@
 <?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
+<div class="page-wrap cart">
+  <pre>
+    <?php // print_r($testProd); ?>
+  </pre>
+  <ul class="breadcrumb cube">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
@@ -20,15 +23,18 @@
     <button type="button" class="close" data-dismiss="alert">&times;</button>
   </div>
   <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
+  <?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
+    <?php $class = 'col-2'; ?>
+    <?php } elseif ($column_left) { ?>
+    <?php $class = 'col-l'; ?>
+    <?php } elseif ($column_right) { ?>
+    <?php $class = 'col-r'; ?>
     <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
+    <?php $class = 'col-0'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+  <div id="content" class="<?php echo $class; ?>">
+    <div class="cube"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?>
         <?php if ($weight) { ?>
         &nbsp;(<?php echo $weight; ?>)
@@ -41,7 +47,7 @@
               <tr>
                 <td class="text-center"><?php echo $column_image; ?></td>
                 <td class="text-left"><?php echo $column_name; ?></td>
-                <td class="text-left"><?php echo $column_model; ?></td>
+                <td class="text-left"><?php echo $column_sku; ?></td>
                 <td class="text-left"><?php echo $column_quantity; ?></td>
                 <td class="text-right"><?php echo $column_price; ?></td>
                 <td class="text-right"><?php echo $column_total; ?></td>
@@ -71,7 +77,7 @@
                   <br />
                   <span class="label label-info"><?php echo $text_recurring_item; ?></span> <small><?php echo $product['recurring']; ?></small>
                   <?php } ?></td>
-                <td class="text-left"><?php echo $product['model']; ?></td>
+                <td class="text-left"><?php echo $product['sku']; ?></td>
                 <td class="text-left"><div class="input-group btn-block" style="max-width: 200px;">
                     <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="form-control" />
                     <span class="input-group-btn">
@@ -103,11 +109,7 @@
       <?php if ($modules) { ?>
       <h2><?php echo $text_next; ?></h2>
       <p><?php echo $text_next_choice; ?></p>
-      <div class="panel-group" id="accordion">
-        <?php foreach ($modules as $module) { ?>
-        <?php echo $module; ?>
-        <?php } ?>
-      </div>
+     
       <?php } ?>
       <br />
       <div class="row">

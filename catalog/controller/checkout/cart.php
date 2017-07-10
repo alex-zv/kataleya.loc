@@ -30,6 +30,8 @@ class ControllerCheckoutCart extends Controller {
 			$data['column_quantity'] = $this->language->get('column_quantity');
 			$data['column_price'] = $this->language->get('column_price');
 			$data['column_total'] = $this->language->get('column_total');
+			$data['column_sku'] = $this->language->get('column_sku');
+
 
 			$data['button_update'] = $this->language->get('button_update');
 			$data['button_remove'] = $this->language->get('button_remove');
@@ -160,6 +162,7 @@ class ControllerCheckoutCart extends Controller {
 					'reward'    => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
 					'price'     => $price,
 					'total'     => $total,
+
 					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
 				);
 			}
